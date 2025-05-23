@@ -1,8 +1,10 @@
-streamlit
+streamlit==1.45.1
 numpy
 opencv-python-headless
 Pillow
-tensorflow
+gdown
 lime
 scikit-image
 matplotlib
+tensorflow==2.13.0
+
