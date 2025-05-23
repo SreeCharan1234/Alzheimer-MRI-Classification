@@ -1,8 +1,8 @@
-streamlit
+streamlit==1.45.1
 numpy
 opencv-python-headless
 Pillow
-tensorflow
+tensorflow==2.13.0  # Change version as needed
 lime
 scikit-image
 matplotlib
