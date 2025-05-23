@@ -2,7 +2,7 @@ streamlit==1.45.1
 numpy
 opencv-python-headless
 Pillow
-
+gdown
 lime
 scikit-image
 matplotlib
