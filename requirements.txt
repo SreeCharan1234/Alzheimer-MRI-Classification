@@ -6,3 +6,4 @@ gdown
 lime
 scikit-image
 matplotlib
+tensorflow
