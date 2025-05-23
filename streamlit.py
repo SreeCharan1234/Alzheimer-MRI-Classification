@@ -1,11 +1,9 @@
 import streamlit as st
 
-# Set page config
+# Set page config must be FIRST
 st.set_page_config(page_title="Alzheimer's Stage Predictor", layout="centered")
 
 import numpy as np
-import os
-import gdown
 import cv2
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.xception import preprocess_input
@@ -14,15 +12,10 @@ from lime import lime_image
 from skimage.segmentation import mark_boundaries
 import matplotlib.pyplot as plt
 
-# Download model from Google Drive if not exists
+# Load model once
 @st.cache_resource
 def load_my_model():
-    model_path = "Augmented_Alzheimer_Model_95.h5"
-    if not os.path.exists(model_path):
-        file_id = "1p1Y7xPpttUaCk1Z2AXJ7Z3AotaZCtOa6"
-        url = f"https://drive.google.com/uc?id={file_id}"
-        gdown.download(url, model_path, quiet=False)
-    return load_model(model_path)
+    return load_model("model/Augmented_Alzheimer_Model_95.h5")
 
 model = load_my_model()
 
