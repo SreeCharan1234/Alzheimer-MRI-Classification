@@ -6,4 +6,5 @@ gdown
 lime
 scikit-image
 matplotlib
-tensorflow
+tensorflow==2.13.0
+
